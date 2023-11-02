@@ -71,6 +71,7 @@ body{
     right: -44px;
     top: 0;
     transform: rotateZ(45deg);
+    z-index: 2;
 }
 .content-div{
     background: white;
@@ -81,30 +82,51 @@ body{
     border-radius: 5px;
     overflow-y: scroll;
     height: 100%;
+    z-index: 1;
 }
 
 /* ============= Certificate Page Css =============== */
 .certificate-con{
     width: 100%;
-    /* border: 1px solid red; */
+    /* border: 1px solid green; */
     height: 100%;
     display: flex;
     justify-content: center;
-    background: cyan;
+    /* background: cyan; */
 }
 .certificate{
     position: relative;
-    width: 80%;
-    background: url('./certificate/certificatebg.jpg') no-repeat;
-    background-size: contain;
+    width: 70%;
+    /* border: 2px solid red; */
+    /* background: url('./certificate/certificatebg.jpg') no-repeat; */
+    /* background-size: cover; */
     
 }
-.certificate img{
+.certificate .certificate-bg{
     max-width:100%;
-    max-height: 100%;
+
     margin: auto;
     position: absolute;
     top: 0;
+    z-index: -2;
+}
+.certificate-bg img{
+    width: 100%;
+}
+.certificate-data{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 10%;
+    align-items: center;
+    justify-content: center;
+    /* height: 30%; */
+    width: 100%;
+    border: 2px solid red;
+    margin-top: 30%;
+}
+.certificate-date{
+    display: inline-block;
+    bottom: 5%;
 }
 
 
